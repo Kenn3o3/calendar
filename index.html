@@ -11,7 +11,6 @@
             padding: 0;
             background-color: #f9f9f9;
         }
-        
         h2 {
             text-align: center;
             padding: 20px 0;
@@ -140,7 +139,7 @@
             right: 5px;
             top: 0;
             bottom: 0;
-            background: #e6f7ff;
+            /* Background and border will be set dynamically */
             border: 1px solid #91d5ff;
             border-radius: 4px;
             padding: 4px;
@@ -164,10 +163,15 @@
             background: #ffe6e6;
             border-color: #ff9191;
         }
-        .task:hover {
-            background: #ffcccc; /* Light red */
+        /* New class for hovered tasks */
+        .task-hovered {
+            background: #ffcccc !important; /* Light red */
             transform: translateY(-2px);
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        /* Remove original hover effect from individual task */
+        .task:hover {
+            /* No styles here */
         }
         /* Make the calendar horizontally scrollable if needed */
         .calendar-body {
@@ -326,14 +330,18 @@
 
         // Collect all unique time points (start and end times)
         let timePointsSet = new Set();
+        let uniqueTasksSet = new Set();
+
         for (let day in scheduleData) {
             for (let task of scheduleData[day]) {
                 timePointsSet.add(task.startTime);
                 timePointsSet.add(task.endTime);
+                uniqueTasksSet.add(task.task);
             }
         }
-        // Convert timePointsSet to sorted array
+        // Convert sets to arrays
         const timePoints = Array.from(timePointsSet).sort((a, b) => timeStrToMinutes(a) - timeStrToMinutes(b));
+        const uniqueTasks = Array.from(uniqueTasksSet);
 
         // Map timePoints to indices
         const timeToIndex = {};
@@ -345,6 +353,46 @@
         const container = document.createElement('div');
         container.className = 'calendar-container';
         calendarEl.appendChild(container);
+
+        // Function to generate distinct colors
+        function generateDistinctColors(numColors) {
+            const colors = [];
+            const saturation = 70;
+            const lightness = 70;
+            const step = Math.floor(360 / numColors);
+
+            for (let i = 0; i < numColors; i++) {
+                const hue = (i * step) % 360;
+                colors.push(`hsl(${hue}, ${saturation}%, ${lightness}%)`);
+            }
+            return colors;
+        }
+
+        // Create a color map for task names
+        const taskColors = {};
+        const taskBorderColors = {};
+
+        // Generate sufficient distinct colors
+        const baseColors = generateDistinctColors(uniqueTasks.length);
+
+        uniqueTasks.forEach((taskName, index) => {
+            taskColors[taskName] = baseColors[index];
+            // Slightly darker border color
+            taskBorderColors[taskName] = baseColors[index].replace(/(\d+)%\)/, (match, p1) => {
+                return (parseInt(p1) - 10) + '%)';
+            });
+        });
+
+        // Function to compute the rounded duration
+        function computeRoundedDuration(startTimeStr, endTimeStr) {
+            const startMinutes = timeStrToMinutes(startTimeStr);
+            const endMinutes = timeStrToMinutes(endTimeStr);
+            const durationMinutes = endMinutes - startMinutes;
+            const durationHours = durationMinutes / 60;
+            // Round up to the nearest 0.5
+            const roundedDuration = Math.ceil(durationHours * 2) / 2;
+            return roundedDuration;
+        }
 
         // Create the grid container with two rows: headers and body
         const headerRow = document.createElement('div');
@@ -436,21 +484,38 @@
                 const startIndex = timeToIndex[task.startTime];
                 const endIndex = timeToIndex[task.endTime];
 
+                // Get colors for the task name
+                const taskColor = taskColors[task.task];
+                const borderColor = taskBorderColors[task.task];
+
+                // Compute rounded duration
+                const duration = computeRoundedDuration(task.startTime, task.endTime);
+
                 const taskElement = document.createElement('div');
                 taskElement.className = 'task';
                 taskElement.style.top = (startIndex + 1) * intervalHeight + 'px';
                 taskElement.style.height = (endIndex - startIndex) * intervalHeight - 4 + 'px'; // Subtract margin
 
-                taskElement.textContent = `${task.task}`;
+                // Set the task text with duration
+                taskElement.textContent = `${task.task} (${duration}h)`;
                 taskElement.title = `${task.task}`;
+
+                // Set the background and border colors
+                taskElement.style.background = taskColor;
+                taskElement.style.borderColor = borderColor;
+
+                // Assign data-task-name attribute
+                taskElement.setAttribute('data-task-name', task.task);
 
                 dayColumn.appendChild(taskElement);
 
-                // Add hover effect
+                // Add event listeners
                 taskElement.addEventListener('mouseenter', function() {
+                    highlightTasksWithSameName(task.task, true);
                     highlightTimeRange(task.startTime, task.endTime, true);
                 });
                 taskElement.addEventListener('mouseleave', function() {
+                    highlightTasksWithSameName(task.task, false);
                     highlightTimeRange(task.startTime, task.endTime, false);
                 });
 
@@ -458,7 +523,8 @@
                 tasksByDay[day].push({
                     element: taskElement,
                     startTime: task.startTime,
-                    endTime: task.endTime
+                    endTime: task.endTime,
+                    taskName: task.task
                 });
             }
         });
@@ -526,6 +592,20 @@
                 taskInfo.element.classList.remove('highlight');
             }
             highlightTimeRange(taskInfo.startTime, taskInfo.endTime, highlight);
+        });
+    }
+
+    // New function to highlight tasks with the same name
+    function highlightTasksWithSameName(taskName, highlight) {
+        // Escape special characters in taskName for querySelectorAll
+        const escapedTaskName = CSS.escape(taskName);
+        const taskElements = document.querySelectorAll(`.task[data-task-name="${escapedTaskName}"]`);
+        taskElements.forEach(taskEl => {
+            if (highlight) {
+                taskEl.classList.add('task-hovered');
+            } else {
+                taskEl.classList.remove('task-hovered');
+            }
         });
     }
 
