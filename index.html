@@ -178,8 +178,8 @@
             overflow-x: auto;
         }
         .current-task {
-            background: #ffffa9; /* Light yellow background */
-            border-color: #ffeeba;
+            background: #ffffa9 !important;/* Light yellow background */
+            border: 2px solid #ff0000 !important;
             animation: pulse 2s infinite; /* Optional animation */
         }
         /* Styling for the file upload container */
@@ -233,6 +233,21 @@
             50% { box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); }
             100% { box-shadow: 0 0 0 rgba(0, 0, 0, 0.2); }
         }
+        
+        /* Timer styles */
+        #timer {
+            text-align: center;
+            padding: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            background-color: #f0f0f0;
+            min-width: 800px;
+            box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+        }
     </style>
 </head>
 <body>
@@ -246,15 +261,21 @@
     <div id="fileName" class="file-name"></div>
 </div>
 <div id="str">
-<div id="calendar"></div>
-<div id="empty"></div>
+    <div id="calendar"></div>
+    <div id="empty"></div>
 </div>
+
+<!-- New Timer Div -->
+<div id="timer"></div>
+
 <script>
     const daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
     const calendarEl = document.getElementById('calendar');
     const fileInput = document.getElementById('fileInput');
     let scheduleData = {};
     let tasksByDay = {};
+    let currentTaskInfo = null; // Variable to hold the current task information
+    let timerInterval; // Variable to hold the timer interval
 
     // Function to fetch and load the default schedule.txt on page load
     function loadDefaultSchedule() {
@@ -268,13 +289,14 @@
             .then(text => {
                 scheduleData = parseSchedule(text);
                 renderCalendar(scheduleData);
-                highlightCurrentTask();
-                // Set interval to update current task every minute
-                setInterval(highlightCurrentTask, 60000);
+
+                updateTimerDisplay(); // Initial call to display the timer
+
+                // Set interval to update timer display every second
+                timerInterval = setInterval(updateTimerDisplay, 1000);
             })
             .catch(error => {
                 console.error('Error fetching schedule.txt:', error);
-                // Optionally, display a message to the user
                 calendarEl.innerHTML = '<p style="color: red; text-align: center;">Failed to load default schedule.</p>';
             });
     }
@@ -293,10 +315,13 @@
             const scheduleText = e.target.result;
             scheduleData = parseSchedule(scheduleText);
             renderCalendar(scheduleData);
-            highlightCurrentTask();
+            updateTimerDisplay(); // Update timer immediately
+
             // Reset the interval in case a new file is loaded
-            clearInterval(highlightInterval);
-            setInterval(highlightCurrentTask, 60000);
+            clearInterval(timerInterval);
+
+            // Set new interval
+            timerInterval = setInterval(updateTimerDisplay, 1000);
         };
         reader.readAsText(file);
     }
@@ -530,39 +555,82 @@
         });
     }
 
-    function highlightCurrentTask() {
-        // Clear any existing highlights
-        document.querySelectorAll('.current-task').forEach(taskEl => {
-            taskEl.classList.remove('current-task');
-        });
-
-        // Get the current date and time
+    function updateTimerDisplay() {
+        const timerEl = document.getElementById('timer');
         const now = new Date();
         const options = { weekday: 'long' };
         const currentDayName = now.toLocaleDateString('en-US', options);
         const hours = now.getHours();
         const minutes = now.getMinutes();
+        const seconds = now.getSeconds();
 
-        // Format current time as 'HH:MM' with leading zeros
-        const currentTimeStr = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}`;
+        const currentMinutes = hours * 60 + minutes + seconds / 60;
 
         // Find the tasks scheduled for the current day
         const tasksToday = tasksByDay[currentDayName] || [];
-        console.log(`Current time: ${currentTimeStr}`);
-        console.log(`Current day: ${currentDayName}`);
+
+        // Update the current task based on the current time
+        let newCurrentTaskInfo = null;
+
         for (let taskInfo of tasksToday) {
-            const taskElement = taskInfo.element;
             const taskStartMinutes = timeStrToMinutes(taskInfo.startTime);
             const taskEndMinutes = timeStrToMinutes(taskInfo.endTime);
-            const currentMinutes = hours * 60 + minutes;
 
             if (currentMinutes >= taskStartMinutes && currentMinutes < taskEndMinutes) {
-                // Highlight this task
-                taskElement.classList.add('current-task');
-            } else {
-                // Remove highlight if any
-                taskElement.classList.remove('current-task');
+                newCurrentTaskInfo = {
+                    ...taskInfo,
+                    remainingMinutes: taskEndMinutes - currentMinutes
+                };
+                break; // No need to check further tasks
             }
+        }
+
+        // Check if the current task has changed
+        if (currentTaskInfo !== newCurrentTaskInfo) {
+            // Remove highlight from previous task if any
+            if (currentTaskInfo && currentTaskInfo.element) {
+                currentTaskInfo.element.classList.remove('current-task');
+            }
+
+            currentTaskInfo = newCurrentTaskInfo;
+
+            // Highlight the new current task
+            if (currentTaskInfo && currentTaskInfo.element) {
+                currentTaskInfo.element.classList.add('current-task');
+            }
+        }
+
+        // Update the timer display
+        if (currentTaskInfo) {
+            const endMinutes = timeStrToMinutes(currentTaskInfo.endTime);
+            const remainingMinutesFloat = endMinutes - currentMinutes;
+
+            if (remainingMinutesFloat > 0) {
+                const totalSeconds = Math.floor(remainingMinutesFloat * 60);
+                const hours = Math.floor(totalSeconds / 3600);
+                const minutes = Math.floor((totalSeconds % 3600) / 60);
+                const seconds = totalSeconds % 60;
+
+                let timeString = '';
+
+                if (hours > 0) {
+                    timeString += `${hours} hour${hours !== 1 ? 's' : ''} `;
+                }
+
+                if (minutes > 0 || hours > 0) {
+                    timeString += `${minutes} minute${minutes !== 1 ? 's' : ''} `;
+                }
+
+                timeString += `${seconds} second${seconds !== 1 ? 's' : ''}`;
+
+                timerEl.textContent = `Time remaining for current task (${currentTaskInfo.taskName}): ${timeString}`;
+            } else {
+                timerEl.textContent = `No task currently scheduled.`;
+                currentTaskInfo.element.classList.remove('current-task');
+                currentTaskInfo = null;
+            }
+        } else {
+            timerEl.textContent = `No task currently scheduled.`;
         }
     }
 
@@ -595,7 +663,6 @@
         });
     }
 
-    // New function to highlight tasks with the same name
     function highlightTasksWithSameName(taskName, highlight) {
         // Escape special characters in taskName for querySelectorAll
         const escapedTaskName = CSS.escape(taskName);
