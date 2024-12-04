@@ -8,7 +8,7 @@ Monday:
 13:00 - 15:00: Robotics online degree
 15:00 - 18:00: GE1358 CA1
 18:00 - 19:00: Dinner
-19:00 - 22:00: Human Pose research paper
+19:00 - 22:00: Human Pose Research
 22:00 - 23:00: Go back home and shower
 23:00 - 24:00: Plan schedule
 
@@ -17,10 +17,10 @@ Tuesday:
 07:40 - 08:00: stretching + brush teeth
 08:00 - 08:20: take shower
 08:20 - 09:00: go to school
-09:00 - 12:00: Work on 2 GE + JC2066
+09:00 - 12:00: Work on 2 GE + JC
 12:00 - 13:00: Swim
 13:00 - 14:00: Lunch
-14:00 - 18:00: Embodied AI research paper
+14:00 - 18:00: Embodied AI Research
 18:00 - 19:00: Dinner
 19:00 - 22:00: Robotics online degree
 22:00 - 23:00: Go back home and shower
@@ -36,7 +36,7 @@ Wednesday:
 13:00 - 14:00: Lunch
 14:00 - 18:00: Analysis + Calculus
 18:00 - 19:00: Dinner
-19:00 - 22:00: Embodied AI Research paper
+19:00 - 22:00: Embodied AI Research
 22:00 - 23:00: Go back home and shower
 23:00 - 24:00: Plan schedule
 
@@ -48,9 +48,9 @@ Thursday:
 09:00 - 12:00: Robotics online degree
 12:00 - 13:00: Swim
 13:00 - 14:00: Lunch
-14:00 - 18:00: Embodied AI Research paper
+14:00 - 18:00: Embodied AI Research
 18:00 - 19:00: Dinner
-19:00 - 22:00: Embodied AI Research paper
+19:00 - 22:00: Embodied AI Research
 22:00 - 23:00: Go back home and shower
 23:00 - 24:00: Plan schedule
 
@@ -62,7 +62,7 @@ Friday:
 09:00 - 12:00: JC2066 C01
 12:00 - 13:00: Lunch
 13:00 - 14:00: JC2066 T01
-14:00 - 18:00: Embodied AI Research paper
+14:00 - 18:00: Embodied AI Research
 18:00 - 19:00: Dinner
 19:00 - 22:00: Modern Robotics course
 22:00 - 23:00: Go back home and shower
@@ -73,12 +73,12 @@ Saturday:
 07:40 - 08:00: stretching + brush teeth
 08:00 - 08:20: take shower
 08:20 - 09:00: go to school
-09:00 - 12:00: Human pose research paper
+09:00 - 12:00: Human Pose Research
 12:00 - 13:00: Do Gym
 13:00 - 14:00: Lunch
-14:00 - 18:00: Embodied AI Research paper
+14:00 - 18:00: Embodied AI Research
 18:00 - 19:00: Dinner
-19:00 - 22:00: Embodied AI Research paper
+19:00 - 22:00: Embodied AI Research
 22:00 - 23:00: Go back home and shower
 23:00 - 24:00: Plan schedule
 
@@ -87,11 +87,11 @@ Sunday:
 07:40 - 08:00: stretching + brush teeth
 08:00 - 08:20: take shower
 08:20 - 09:00: go to school
-09:00 - 12:00: Human pose research paper
+09:00 - 12:00: Human Pose Research
 12:00 - 13:00: Swim
 13:00 - 14:00: Lunch
-14:00 - 18:00: Matrix Algebra + Linear Algebra
+14:00 - 18:00: MA + LA
 18:00 - 19:00: Dinner
-19:00 - 22:00: Embodied AI Research paper
+19:00 - 22:00: Embodied AI Research
 22:00 - 23:00: Go back home and shower
 23:00 - 24:00: Plan schedule
