@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weekly Schedule Calendar</title>
+    <style>
+        /* (Your existing CSS styles remain unchanged) */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        h2 {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #4a90e2;
+            color: white;
+            margin: 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            min-width: 800px;
+        }
+        .upload-container {
+            text-align: center;
+            margin: 20px 0;
+            min-width: 800px;
+        }
+        #fileInput {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            cursor: pointer;
+            background-color: white;
+        }
+        #calendar {
+            border-top: 1px solid #ccc;
+            position: relative;
+            height: 80vh; /* Adjust as needed */
+            overflow: hidden;
+            min-width: 800px;
+        }
+        .calendar-container {
+            height: calc(100vh - 120px); /* Adjust based on other elements' height */
+            display: flex;
+            flex-direction: column;
+        }
+        .calendar-header {
+            display: flex;
+            min-width: 800px;
+        }
+        .empty-header {
+            background-color: #fff;
+            border-right: 1px solid #ccc;
+            width: 80px;
+            flex-shrink: 0;
+        }
+        .day-header {
+            background: #4a90e2;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            font-weight: bold;
+            border-bottom: 1px solid #ccc;
+            box-shadow: 0 2px 2px rgba(0,0,0,0.1);
+            flex: 1;
+            min-width: 120px; /* Minimum width to show full text */
+            cursor: pointer;
+            transition: background-color 0.3s; /* Smooth transition */
+        }
+        .day-header:hover {
+            background: #3a7bd5; /* Slightly darker blue */
+        }
+        .calendar-body {
+            display: flex;
+            overflow: auto;
+            min-width: 800px;
+        }
+        .time-labels {
+            position: relative;
+            background: #fff;
+            border-right: 1px solid #ccc;
+            width: 80px;
+            flex-shrink: 0;
+        }
+        .time-cell {
+            height: 40px; /* Fixed height for each time interval */
+            box-sizing: border-box;
+            position: relative;
+        }
+        .time-cell::after {
+            content: '';
+            position: absolute;
+            top: 0; /* Move line to top of time-cell */
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: #eee;
+        }
+        .time-label {
+            position: absolute;
+            top: 0px; /* Adjust to align with line */
+            right: 10px;
+            font-size: 12px;
+            color: #555;
+            white-space: nowrap;
+            background: #fff; /* To prevent overlap with lines */
+            padding-right: 5px;
+        }
+        .time-cell.highlight::after {
+            background: red;
+        }
+        .time-label.highlight {
+            color: red;
+        }
+        .day-column {
+            position: relative;
+            background-color: #fff;
+            flex: 1;
+            min-width: 120px; /* Minimum width to show full text */
+        }
+        .task {
+            position: absolute;
+            left: 5px;
+            right: 5px;
+            top: 0;
+            bottom: 0;
+            background: #e6f7ff;
+            border: 1px solid #91d5ff;
+            border-radius: 4px;
+            padding: 4px;
+            font-size: 12px;
+            box-sizing: border-box;
+            overflow: hidden;
+            cursor: pointer;
+            margin: 2px 0;
+
+            /* Ensure text is fully visible */
+            white-space: normal;
+            word-wrap: break-word;
+
+            transition: background-color 0.3s; /* Smooth transition */
+        }
+        /* Additional class for highlighted tasks */
+        .task.highlight {
+            background: #ffe6e6;
+            border-color: #ff9191;
+        }
+        .task:hover {
+            background: #ffcccc; /* Light red */
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        /* Make the calendar horizontally scrollable if needed */
+        .calendar-body {
+            overflow-x: auto;
+        }
+        .current-task {
+            background: #ffffa9; /* Light yellow background */
+            border-color: #ffeeba;
+            animation: pulse 2s infinite; /* Optional animation */
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 rgba(0, 0, 0, 0.2); }
+            50% { box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); }
+            100% { box-shadow: 0 0 0 rgba(0, 0, 0, 0.2); }
+        }
+    </style>
+</head>
+<body>
+
+<h2>Weekly Schedule Calendar</h2>
+
+<!-- Optional: Keep the upload container if you want to allow manual uploads as well -->
+<div class="upload-container">
+    <input type="file" id="fileInput" accept=".txt">
+</div>
+
+<div id="calendar"></div>
+
+<script>
+    const daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+    const calendarEl = document.getElementById('calendar');
+    const fileInput = document.getElementById('fileInput');
+    let scheduleData = {};
+    let tasksByDay = {};
+
+    // Function to fetch and load the default schedule.txt on page load
+    function loadDefaultSchedule() {
+        fetch('schedule.txt')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok ' + response.statusText);
+                }
+                return response.text();
+            })
+            .then(text => {
+                scheduleData = parseSchedule(text);
+                renderCalendar(scheduleData);
+                highlightCurrentTask();
+                // Set interval to update current task every minute
+                setInterval(highlightCurrentTask, 60000);
+            })
+            .catch(error => {
+                console.error('Error fetching schedule.txt:', error);
+                // Optionally, display a message to the user
+                calendarEl.innerHTML = '<p style="color: red; text-align: center;">Failed to load default schedule.</p>';
+            });
+    }
+
+    // Event listener for manual file upload (optional)
+    fileInput.addEventListener('change', function(event) {
+        const file = event.target.files[0];
+        if (file) {
+            readScheduleFile(file);
+        }
+    });
+
+    function readScheduleFile(file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            const scheduleText = e.target.result;
+            scheduleData = parseSchedule(scheduleText);
+            renderCalendar(scheduleData);
+            highlightCurrentTask();
+            // Reset the interval in case a new file is loaded
+            clearInterval(highlightInterval);
+            setInterval(highlightCurrentTask, 60000);
+        };
+        reader.readAsText(file);
+    }
+
+    function parseSchedule(text) {
+        const lines = text.split('\n');
+        const schedule = {};
+        let currentDay = '';
+        for (let line of lines) {
+            line = line.trim();
+            if (line.endsWith(':')) {
+                currentDay = line.slice(0, -1);
+                schedule[currentDay] = [];
+            } else if (line && currentDay) {
+                const match = line.match(/^(\d{1,2}:\d{2})\s*-\s*(\d{1,2}:\d{2}):\s*(.*)$/);
+                if (match) {
+                    schedule[currentDay].push({
+                        startTime: match[1],
+                        endTime: match[2],
+                        task: match[3]
+                    });
+                }
+            }
+        }
+        return schedule;
+    }
+
+    function renderCalendar(scheduleData) {
+        // Clear previous calendar content
+        calendarEl.innerHTML = '';
+
+        // Collect all unique time points (start and end times)
+        let timePointsSet = new Set();
+        for (let day in scheduleData) {
+            for (let task of scheduleData[day]) {
+                timePointsSet.add(task.startTime);
+                timePointsSet.add(task.endTime);
+            }
+        }
+        // Convert timePointsSet to sorted array
+        const timePoints = Array.from(timePointsSet).sort((a, b) => timeStrToMinutes(a) - timeStrToMinutes(b));
+
+        // Map timePoints to indices
+        const timeToIndex = {};
+        timePoints.forEach((time, index) => {
+            timeToIndex[time] = index;
+        });
+
+        // Create the calendar container
+        const container = document.createElement('div');
+        container.className = 'calendar-container';
+        calendarEl.appendChild(container);
+
+        // Create the grid container with two rows: headers and body
+        const headerRow = document.createElement('div');
+        headerRow.className = 'calendar-header';
+        container.appendChild(headerRow);
+
+        // Add empty header for time labels
+        const emptyHeader = document.createElement('div');
+        emptyHeader.className = 'empty-header';
+        headerRow.appendChild(emptyHeader);
+
+        // Create day headers
+        daysOfWeek.forEach(day => {
+            const header = document.createElement('div');
+            header.className = 'day-header';
+            header.textContent = day;
+            headerRow.appendChild(header);
+
+            // Add hover effect for day headers
+            header.addEventListener('mouseenter', function() {
+                highlightDayTasks(day, true);
+                header.classList.add('hovered');
+            });
+            header.addEventListener('mouseleave', function() {
+                highlightDayTasks(day, false);
+                header.classList.remove('hovered');
+            });
+        });
+
+        // Create the body row
+        const bodyRow = document.createElement('div');
+        bodyRow.className = 'calendar-body';
+        container.appendChild(bodyRow);
+
+        // Create time labels and time cells
+        const timeLabelsContainer = document.createElement('div');
+        timeLabelsContainer.className = 'time-labels';
+        bodyRow.appendChild(timeLabelsContainer);
+
+        const intervalHeight = 40; // Fixed height for each time interval
+
+        // Add an empty time-cell at the top as a spacer
+        const emptyTimeCell = document.createElement('div');
+        emptyTimeCell.className = 'time-cell';
+        emptyTimeCell.style.height = intervalHeight + 'px';
+        timeLabelsContainer.appendChild(emptyTimeCell);
+
+        timePoints.forEach(time => {
+            const timeCell = document.createElement('div');
+            timeCell.className = 'time-cell';
+            timeCell.style.height = intervalHeight + 'px';
+            timeCell.setAttribute('data-time', time); // Add data-time attribute
+            timeLabelsContainer.appendChild(timeCell);
+
+            const timeLabel = document.createElement('div');
+            timeLabel.className = 'time-label';
+            timeLabel.textContent = time;
+            timeLabel.setAttribute('data-time', time); // Add data-time attribute
+            timeCell.appendChild(timeLabel);
+        });
+
+        // Initialize tasksByDay dictionary
+        tasksByDay = {};
+
+        // Create day columns and tasks
+        daysOfWeek.forEach(day => {
+            const dayColumn = document.createElement('div');
+            dayColumn.className = 'day-column';
+            bodyRow.appendChild(dayColumn);
+
+            // Add an empty time-cell at the top
+            const emptyTimeCellDay = document.createElement('div');
+            emptyTimeCellDay.className = 'time-cell';
+            emptyTimeCellDay.style.height = intervalHeight + 'px';
+            dayColumn.appendChild(emptyTimeCellDay);
+
+            // Create time cells for each time point
+            timePoints.forEach(() => {
+                const timeCell = document.createElement('div');
+                timeCell.className = 'time-cell';
+                timeCell.style.height = intervalHeight + 'px';
+                dayColumn.appendChild(timeCell);
+            });
+
+            // Add tasks to day columns
+            const daySchedule = scheduleData[day] || [];
+            tasksByDay[day] = []; // Initialize array for tasks of the day
+            for (let task of daySchedule) {
+                const startIndex = timeToIndex[task.startTime];
+                const endIndex = timeToIndex[task.endTime];
+
+                const taskElement = document.createElement('div');
+                taskElement.className = 'task';
+                taskElement.style.top = (startIndex + 1) * intervalHeight + 'px';
+                taskElement.style.height = (endIndex - startIndex) * intervalHeight - 4 + 'px'; // Subtract margin
+
+                taskElement.textContent = `${task.task}`;
+                taskElement.title = `${task.task}`;
+
+                dayColumn.appendChild(taskElement);
+
+                // Add hover effect
+                taskElement.addEventListener('mouseenter', function() {
+                    highlightTimeRange(task.startTime, task.endTime, true);
+                });
+                taskElement.addEventListener('mouseleave', function() {
+                    highlightTimeRange(task.startTime, task.endTime, false);
+                });
+
+                // Store task element for day
+                tasksByDay[day].push({
+                    element: taskElement,
+                    startTime: task.startTime,
+                    endTime: task.endTime
+                });
+            }
+        });
+    }
+
+    function highlightCurrentTask() {
+        // Clear any existing highlights
+        document.querySelectorAll('.current-task').forEach(taskEl => {
+            taskEl.classList.remove('current-task');
+        });
+
+        // Get the current date and time
+        const now = new Date();
+        const options = { weekday: 'long' };
+        const currentDayName = now.toLocaleDateString('en-US', options);
+        const hours = now.getHours();
+        const minutes = now.getMinutes();
+
+        // Format current time as 'HH:MM' with leading zeros
+        const currentTimeStr = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}`;
+
+        // Find the tasks scheduled for the current day
+        const tasksToday = tasksByDay[currentDayName] || [];
+        console.log(`Current time: ${currentTimeStr}`);
+        console.log(`Current day: ${currentDayName}`);
+        for (let taskInfo of tasksToday) {
+            const taskElement = taskInfo.element;
+            const taskStartMinutes = timeStrToMinutes(taskInfo.startTime);
+            const taskEndMinutes = timeStrToMinutes(taskInfo.endTime);
+            const currentMinutes = hours * 60 + minutes;
+
+            if (currentMinutes >= taskStartMinutes && currentMinutes < taskEndMinutes) {
+                // Highlight this task
+                taskElement.classList.add('current-task');
+            } else {
+                // Remove highlight if any
+                taskElement.classList.remove('current-task');
+            }
+        }
+    }
+
+    function highlightTimeRange(startTime, endTime, highlight) {
+        const timePointsInRange = [startTime, endTime];
+        timePointsInRange.forEach(time => {
+            const timeLabel = document.querySelector(`.time-label[data-time="${time}"]`);
+            const timeCell = document.querySelector(`.time-cell[data-time="${time}"]`);
+            if (timeLabel && timeCell) {
+                if (highlight) {
+                    timeLabel.classList.add('highlight');
+                    timeCell.classList.add('highlight');
+                } else {
+                    timeLabel.classList.remove('highlight');
+                    timeCell.classList.remove('highlight');
+                }
+            }
+        });
+    }
+
+    function highlightDayTasks(day, highlight) {
+        const tasks = tasksByDay[day];
+        tasks.forEach(taskInfo => {
+            if (highlight) {
+                taskInfo.element.classList.add('highlight');
+            } else {
+                taskInfo.element.classList.remove('highlight');
+            }
+            highlightTimeRange(taskInfo.startTime, taskInfo.endTime, highlight);
+        });
+    }
+
+    function timeStrToMinutes(timeStr) {
+        const [hours, minutes] = timeStr.split(':').map(Number);
+        return hours * 60 + minutes;
+    }
+
+    // Load the default schedule when the page loads
+    window.addEventListener('DOMContentLoaded', (event) => {
+        loadDefaultSchedule();
+    });
+</script>
+
+</body>
+</html>
