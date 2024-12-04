@@ -38,7 +38,7 @@
             width: 100%; /* Ensure the container takes up the full width */
         }
         #calendar {
-            flex: 0 0 98%; /* Do not grow or shrink, occupy 90% of the container's width */
+            flex: 0 0 90%; /* Do not grow or shrink, occupy 90% of the container's width */
             border-top: 1px solid #ccc;
             position: relative;
             height: 100vh; /* Full viewport height */
@@ -46,14 +46,7 @@
             box-sizing: border-box; /* Include padding and border in width and height */
         }
         #empty {
-            flex: 0 0 2%; /* Do not grow or shrink, occupy 10% of the container's width */
-        }
-        /* Wrapper to handle horizontal scrolling */
-        .scroll-wrapper {
-            overflow-x: auto;
-            scroll-behavior: smooth;
-            /* Optional: Hide vertical scrollbar if unnecessary */
-            /* overflow-y: hidden; */
+            flex: 0 0 10%; /* Do not grow or shrink, occupy 10% of the container's width */
         }
         .calendar-container {
             height: calc(100vh - 120px); /* Adjust based on other elements' height */
@@ -61,7 +54,6 @@
             flex-direction: column;
         }
         .calendar-header {
-            position: sticky;
             display: flex;
             min-width: 800px;
         }
@@ -326,14 +318,7 @@
         }
         return schedule;
     }
-    function synchronizeScroll() {
-        const header = document.querySelector('.calendar-header');
-        const body = document.querySelector('.calendar-body');
 
-        body.addEventListener('scroll', () => {
-            header.scrollLeft = body.scrollLeft;
-        });
-    }
     function renderCalendar(scheduleData) {
         // Clear previous calendar content
         calendarEl.innerHTML = '';
@@ -355,20 +340,16 @@
             timeToIndex[time] = index;
         });
 
-        // Create the scrollable wrapper
-        const scrollWrapper = document.createElement('div');
-        scrollWrapper.className = 'scroll-wrapper';
-        calendarEl.appendChild(scrollWrapper);
-
-        // Create the calendar container inside the scrollable wrapper
+        // Create the calendar container
         const container = document.createElement('div');
         container.className = 'calendar-container';
-        scrollWrapper.appendChild(container);
+        calendarEl.appendChild(container);
 
-        // Create the header and body inside the container
+        // Create the grid container with two rows: headers and body
         const headerRow = document.createElement('div');
         headerRow.className = 'calendar-header';
         container.appendChild(headerRow);
+
         // Add empty header for time labels
         const emptyHeader = document.createElement('div');
         emptyHeader.className = 'empty-header';
@@ -480,7 +461,6 @@
                 });
             }
         });
-        synchronizeScroll();
     }
 
     function highlightCurrentTask() {
