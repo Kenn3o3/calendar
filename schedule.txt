@@ -3,12 +3,11 @@ Monday:
 07:40 - 08:00: stretching + brush teeth
 08:00 - 08:20: take shower
 08:20 - 09:00: go to school
-09:00 - 12:00: GE2134 C01
+09:00 - 12:00: pre for exam
 12:00 - 13:00: Lunch
-13:00 - 15:00: Robotics online degree
-15:00 - 18:00: GE1358 CA1
+13:00 - 18:00: pre for exam
 18:00 - 19:00: Dinner
-19:00 - 22:00: Human Pose Research
+19:00 - 22:00: EAI
 22:00 - 23:00: Go back home and shower
 23:00 - 24:00: Plan schedule
 
@@ -17,12 +16,11 @@ Tuesday:
 07:40 - 08:00: stretching + brush teeth
 08:00 - 08:20: take shower
 08:20 - 09:00: go to school
-09:00 - 12:00: Work on 2 GE + JC
-12:00 - 13:00: Swim
-13:00 - 14:00: Lunch
-14:00 - 18:00: Embodied AI Research
+09:00 - 12:00: pre for exam
+12:00 - 13:00: Lunch
+13:00 - 18:00: pre for exam
 18:00 - 19:00: Dinner
-19:00 - 22:00: Robotics online degree
+19:00 - 22:00: EAI
 22:00 - 23:00: Go back home and shower
 23:00 - 24:00: Plan schedule
 
@@ -31,12 +29,11 @@ Wednesday:
 07:40 - 08:00: stretching + brush teeth
 08:00 - 08:20: take shower
 08:20 - 09:00: go to school
-09:00 - 12:00: Robotics online degree
-12:00 - 13:00: Do Gym
-13:00 - 14:00: Lunch
-14:00 - 18:00: Analysis + Calculus
+09:00 - 12:00: pre for exam
+12:00 - 13:00: Lunch
+13:00 - 18:00: pre for exam
 18:00 - 19:00: Dinner
-19:00 - 22:00: Embodied AI Research
+19:00 - 22:00: EAI
 22:00 - 23:00: Go back home and shower
 23:00 - 24:00: Plan schedule
 
@@ -45,12 +42,11 @@ Thursday:
 07:40 - 08:00: stretching + brush teeth
 08:00 - 08:20: take shower
 08:20 - 09:00: go to school
-09:00 - 12:00: Robotics online degree
-12:00 - 13:00: Swim
-13:00 - 14:00: Lunch
-14:00 - 18:00: Embodied AI Research
+09:00 - 12:00: pre for exam
+12:00 - 13:00: Lunch
+13:00 - 18:00: pre for exam
 18:00 - 19:00: Dinner
-19:00 - 22:00: Embodied AI Research
+19:00 - 22:00: EAI
 22:00 - 23:00: Go back home and shower
 23:00 - 24:00: Plan schedule
 
@@ -59,12 +55,11 @@ Friday:
 07:40 - 08:00: stretching + brush teeth
 08:00 - 08:20: take shower
 08:20 - 09:00: go to school
-09:00 - 12:00: JC2066 C01
+09:00 - 12:00: pre for exam
 12:00 - 13:00: Lunch
-13:00 - 14:00: JC2066 T01
-14:00 - 18:00: Embodied AI Research
+13:00 - 18:00: pre for exam
 18:00 - 19:00: Dinner
-19:00 - 22:00: Modern Robotics course
+19:00 - 22:00: EAI
 22:00 - 23:00: Go back home and shower
 23:00 - 24:00: Plan schedule
 
@@ -73,12 +68,11 @@ Saturday:
 07:40 - 08:00: stretching + brush teeth
 08:00 - 08:20: take shower
 08:20 - 09:00: go to school
-09:00 - 12:00: Human Pose Research
-12:00 - 13:00: Do Gym
-13:00 - 14:00: Lunch
-14:00 - 18:00: Embodied AI Research
+09:00 - 12:00: pre for exam
+12:00 - 13:00: Lunch
+13:00 - 18:00: pre for exam
 18:00 - 19:00: Dinner
-19:00 - 22:00: Embodied AI Research
+19:00 - 22:00: EAI
 22:00 - 23:00: Go back home and shower
 23:00 - 24:00: Plan schedule
 
@@ -87,11 +81,10 @@ Sunday:
 07:40 - 08:00: stretching + brush teeth
 08:00 - 08:20: take shower
 08:20 - 09:00: go to school
-09:00 - 12:00: Human Pose Research
-12:00 - 13:00: Swim
-13:00 - 14:00: Lunch
-14:00 - 18:00: MA + LA
+09:00 - 12:00: pre for exam
+12:00 - 13:00: Lunch
+13:00 - 18:00: pre for exam
 18:00 - 19:00: Dinner
-19:00 - 22:00: Embodied AI Research
+19:00 - 22:00: EAI
 22:00 - 23:00: Go back home and shower
 23:00 - 24:00: Plan schedule
