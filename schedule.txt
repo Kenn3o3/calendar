@@ -84,7 +84,8 @@ Sunday:
 08:20 - 09:00: go to school
 09:00 - 12:00: pre for exam
 12:00 - 13:00: Lunch
-13:00 - 18:00: pre for exam
+13:00 - 16:00: pre for exam
+16:00 - 18:00: EAI
 18:00 - 19:00: Dinner
 19:00 - 22:00: EAI
 22:00 - 23:00: Go back home and shower
