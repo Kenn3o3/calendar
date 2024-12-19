@@ -3,11 +3,11 @@ Monday:
 07:40 - 08:00: stretching + brush teeth
 08:00 - 08:20: take shower
 08:20 - 09:00: go to school
-09:00 - 12:00: pre for exam
+09:00 - 12:00: Embodied AI
 12:00 - 13:00: Lunch
-13:00 - 18:00: pre for exam
+13:00 - 18:00: Embodied AI
 18:00 - 19:00: Dinner
-19:00 - 22:00: EAI
+19:00 - 22:00: Embodied AI
 22:00 - 23:00: Go back home and shower
 23:00 - 24:00: Plan schedule
 
@@ -16,11 +16,11 @@ Tuesday:
 07:40 - 08:00: stretching + brush teeth
 08:00 - 08:20: take shower
 08:20 - 09:00: go to school
-09:00 - 12:00: pre for exam
+09:00 - 12:00: Embodied AI
 12:00 - 13:00: Lunch
-13:00 - 18:00: pre for exam
+13:00 - 18:00: Embodied AI
 18:00 - 19:00: Dinner
-19:00 - 22:00: EAI
+19:00 - 22:00: Embodied AI
 22:00 - 23:00: Go back home and shower
 23:00 - 24:00: Plan schedule
 
@@ -29,11 +29,11 @@ Wednesday:
 07:40 - 08:00: stretching + brush teeth
 08:00 - 08:20: take shower
 08:20 - 09:00: go to school
-09:00 - 12:00: pre for exam
+09:00 - 12:00: Embodied AI
 12:00 - 13:00: Lunch
-13:00 - 18:00: pre for exam
+13:00 - 18:00: Embodied AI
 18:00 - 19:00: Dinner
-19:00 - 22:00: EAI
+19:00 - 22:00: Embodied AI
 22:00 - 23:00: Go back home and shower
 23:00 - 24:00: Plan schedule
 
@@ -42,11 +42,11 @@ Thursday:
 07:40 - 08:00: stretching + brush teeth
 08:00 - 08:20: take shower
 08:20 - 09:00: go to school
-09:00 - 12:00: pre for exam
+09:00 - 12:00: Embodied AI
 12:00 - 13:00: Lunch
-13:00 - 18:00: pre for exam
+13:00 - 18:00: Embodied AI
 18:00 - 19:00: Dinner
-19:00 - 22:00: EAI
+19:00 - 22:00: Embodied AI
 22:00 - 23:00: Go back home and shower
 23:00 - 24:00: Plan schedule
 
@@ -55,12 +55,11 @@ Friday:
 07:40 - 08:00: stretching + brush teeth
 08:00 - 08:20: take shower
 08:20 - 09:00: go to school
-09:00 - 12:00: pre for exam
+09:00 - 12:00: Embodied AI
 12:00 - 13:00: Lunch
-13:00 - 16:00: pre for exam
-16:00 - 19:00: EAI
-19:00 - 20:00: Dinner
-20:00 - 22:00: EAI
+13:00 - 18:00: Embodied AI
+18:00 - 19:00: Dinner
+19:00 - 22:00: Embodied AI
 22:00 - 23:00: Go back home and shower
 23:00 - 24:00: Plan schedule
 
@@ -69,11 +68,11 @@ Saturday:
 07:40 - 08:00: stretching + brush teeth
 08:00 - 08:20: take shower
 08:20 - 09:00: go to school
-09:00 - 12:00: pre for exam
+09:00 - 12:00: Embodied AI
 12:00 - 13:00: Lunch
-13:00 - 18:00: pre for exam
+13:00 - 18:00: Embodied AI
 18:00 - 19:00: Dinner
-19:00 - 22:00: EAI
+19:00 - 22:00: Embodied AI
 22:00 - 23:00: Go back home and shower
 23:00 - 24:00: Plan schedule
 
@@ -82,11 +81,10 @@ Sunday:
 07:40 - 08:00: stretching + brush teeth
 08:00 - 08:20: take shower
 08:20 - 09:00: go to school
-09:00 - 12:00: pre for exam
+09:00 - 12:00: Embodied AI
 12:00 - 13:00: Lunch
-13:00 - 16:00: pre for exam
-16:00 - 18:00: EAI
+13:00 - 18:00: Embodied AI
 18:00 - 19:00: Dinner
-19:00 - 22:00: pre for exam
+19:00 - 22:00: Embodied AI
 22:00 - 23:00: Go back home and shower
 23:00 - 24:00: Plan schedule
