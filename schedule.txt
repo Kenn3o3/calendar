@@ -4,8 +4,9 @@ Monday:
 08:00 - 08:20: take shower
 08:20 - 09:00: go to school
 09:00 - 12:00: Embodied AI
-12:00 - 13:00: Lunch
-13:00 - 18:00: Embodied AI
+12:00 - 13:00: Gym
+13:00 - 14:00 Lunch
+14:00 - 18:00: Embodied AI
 18:00 - 19:00: Dinner
 19:00 - 22:00: Embodied AI
 22:00 - 23:00: Go back home and shower
@@ -17,8 +18,9 @@ Tuesday:
 08:00 - 08:20: take shower
 08:20 - 09:00: go to school
 09:00 - 12:00: Embodied AI
-12:00 - 13:00: Lunch
-13:00 - 18:00: Embodied AI
+12:00 - 13:00: Gym
+13:00 - 14:00 Lunch
+14:00 - 18:00: Embodied AI
 18:00 - 19:00: Dinner
 19:00 - 22:00: Embodied AI
 22:00 - 23:00: Go back home and shower
@@ -30,8 +32,9 @@ Wednesday:
 08:00 - 08:20: take shower
 08:20 - 09:00: go to school
 09:00 - 12:00: Embodied AI
-12:00 - 13:00: Lunch
-13:00 - 18:00: Embodied AI
+12:00 - 13:00: Gym
+13:00 - 14:00 Lunch
+14:00 - 18:00: Embodied AI
 18:00 - 19:00: Dinner
 19:00 - 22:00: Embodied AI
 22:00 - 23:00: Go back home and shower
@@ -43,8 +46,9 @@ Thursday:
 08:00 - 08:20: take shower
 08:20 - 09:00: go to school
 09:00 - 12:00: Embodied AI
-12:00 - 13:00: Lunch
-13:00 - 18:00: Embodied AI
+12:00 - 13:00: Gym
+13:00 - 14:00 Lunch
+14:00 - 18:00: Embodied AI
 18:00 - 19:00: Dinner
 19:00 - 22:00: Embodied AI
 22:00 - 23:00: Go back home and shower
@@ -56,8 +60,9 @@ Friday:
 08:00 - 08:20: take shower
 08:20 - 09:00: go to school
 09:00 - 12:00: Embodied AI
-12:00 - 13:00: Lunch
-13:00 - 18:00: Embodied AI
+12:00 - 13:00: Gym
+13:00 - 14:00 Lunch
+14:00 - 18:00: Embodied AI
 18:00 - 19:00: Dinner
 19:00 - 22:00: Embodied AI
 22:00 - 23:00: Go back home and shower
@@ -69,8 +74,9 @@ Saturday:
 08:00 - 08:20: take shower
 08:20 - 09:00: go to school
 09:00 - 12:00: Embodied AI
-12:00 - 13:00: Lunch
-13:00 - 18:00: Embodied AI
+12:00 - 13:00: Gym
+13:00 - 14:00 Lunch
+14:00 - 18:00: Embodied AI
 18:00 - 19:00: Dinner
 19:00 - 22:00: Embodied AI
 22:00 - 23:00: Go back home and shower
@@ -82,8 +88,9 @@ Sunday:
 08:00 - 08:20: take shower
 08:20 - 09:00: go to school
 09:00 - 12:00: Embodied AI
-12:00 - 13:00: Lunch
-13:00 - 18:00: Embodied AI
+12:00 - 13:00: Gym
+13:00 - 14:00 Lunch
+14:00 - 18:00: Embodied AI
 18:00 - 19:00: Dinner
 19:00 - 22:00: Embodied AI
 22:00 - 23:00: Go back home and shower
