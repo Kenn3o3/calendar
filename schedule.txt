@@ -1,7 +1,7 @@
 Monday:
 09:00 - 11:00: 操卷
 11:00 - 12:00: lunch break
-12:00 - 14:00: MA2001 - Multi-variable Calculus and Linear Algebra LT-15
+12:00 - 14:00: MA2001 Multi-variable Calculus and Linear Algebra LT-15
 14:00 - 15:00: 操卷 MA2001
 15:00 - 18:00: GE1358
 18:00 - 19:00: dinner break
@@ -32,9 +32,9 @@ Thursday:
 21:00 - 22:00: [blank]
 
 Friday:
-09:00 - 12:00: JC2066 C01 14367
+09:00 - 12:00: JC2066 LT-1
 12:00 - 13:00: lunch break
-13:00 - 14:00: JC2066 T01 14368
+13:00 - 14:00: JC2066 LAU 5-206
 14:00 - 18:00: [blank]
 18:00 - 19:00: dinner break
 19:00 - 22:00: [blank]
