@@ -1,5 +1,5 @@
 Monday:
-09:00 - 11:00: 操卷
+09:00 - 11:00: 操卷 MA3511
 11:00 - 12:00: lunch break
 12:00 - 14:00: MA2001 Multi-variable Calculus and Linear Algebra LT-15
 14:00 - 15:00: 操卷 MA2001
