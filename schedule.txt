@@ -1,102 +1,53 @@
 Monday:
-07:30 - 07:40: try to wake up
-07:40 - 08:00: stretching + brush teeth
-08:00 - 08:20: take shower
-08:20 - 09:00: go to school
-09:00 - 10:30: Calculus
-10:30 - 12:00: Embodied AI
-12:00 - 13:00: Gym
-13:00 - 14:00: Lunch
-14:00 - 18:00: Embodied AI
-18:00 - 19:00: Dinner
-19:00 - 22:00: Embodied AI
-22:00 - 23:00: Go back home and shower
-23:00 - 24:00: Plan schedule
+09:00 - 11:00: 操卷
+11:00 - 12:00: lunch break
+12:00 - 13:50: MA2001 - Multi-variable Calculus and Linear Algebra LT-15
+13:50 - 15:00: 操卷 MA2001
+15:00 - 17:50: GE1358
+18:00 - 19:00: dinner break
 
-Tuesday:
-07:30 - 07:40: try to wake up
-07:40 - 08:00: stretching + brush teeth
-08:00 - 08:20: take shower
-08:20 - 09:00: go to school
-09:00 - 10:30: Calculus
-10:30 - 12:00: Embodied AI
-12:00 - 13:00: Gym
-13:00 - 14:00: Lunch
-14:00 - 18:00: Embodied AI
-18:00 - 19:00: Dinner
-19:00 - 22:00: Embodied AI
-22:00 - 23:00: Go back home and shower
-23:00 - 24:00: Plan schedule
+Tuesday: 
+09:00 - 11:00: 操卷 GE1358
+11:00 - 12:00: lunch break
+12:00 - 14:50: GE2134 11591
+15:00 - 18:00: [blank]
+18:00 - 19:00: dinner break
+19:00 - 22:00: [blank]
 
 Wednesday:
-07:30 - 07:40: try to wake up
-07:40 - 08:00: stretching + brush teeth
-08:00 - 08:20: take shower
-08:20 - 09:00: go to school
-09:00 - 10:30: Calculus
-10:30 - 12:00: Embodied AI
-12:00 - 13:00: Gym
-13:00 - 14:00: Lunch
-14:00 - 18:00: Embodied AI
-18:00 - 19:00: Dinner
-19:00 - 22:00: Embodied AI
-22:00 - 23:00: Go back home and shower
-23:00 - 24:00: Plan schedule
+09:00 - 11:00: [blank]
+11:00 - 12:00: lunch break
+12:00 - 14:50: MA3511 Ordinary Differential Equations YEUNG LT-16
+15:00 - 18:00: [blank]
+18:00 - 19:00: dinner break
+19:00 - 22:00: [blank]
 
 Thursday:
-07:30 - 07:40: try to wake up
-07:40 - 08:00: stretching + brush teeth
-08:00 - 08:20: take shower
-08:20 - 09:00: go to school
-09:00 - 10:30: Calculus
-10:30 - 12:00: Embodied AI
-12:00 - 13:00: Gym
-13:00 - 14:00: Lunch
-14:00 - 18:00: Embodied AI
-18:00 - 19:00: Dinner
-19:00 - 22:00: Embodied AI
-22:00 - 23:00: Go back home and shower
-23:00 - 24:00: Plan schedule
+09:00 - 11:00: [blank]
+11:00 - 12:00: lunch break
+12:00 - 18:00: [blank]
+18:00 - 19:00: dinner break
+19:00 - 20:50: MA2001 Multi-variable Calculus and Linear Algebra LT-12
+21:00 - 22:00: [blank]
 
 Friday:
-07:30 - 07:40: try to wake up
-07:40 - 08:00: stretching + brush teeth
-08:00 - 08:20: take shower
-08:20 - 09:00: go to school
-09:00 - 12:00: Embodied AI
-12:00 - 13:00: Gym
-13:00 - 14:00: Lunch
-14:00 - 18:00: Embodied AI
-18:00 - 19:00: Dinner
-19:00 - 22:00: Embodied AI
-22:00 - 23:00: Go back home and shower
-23:00 - 24:00: Plan schedule
+09:00 - 11:50: JC2066 C01 14367
+12:00 - 13:00: lunch break
+13:00 - 13:50: JC2066 T01 14368
+14:00 - 18:00: [blank]
+18:00 - 19:00: dinner break
+19:00 - 22:00: [blank]
 
 Saturday:
-07:30 - 07:40: try to wake up
-07:40 - 08:00: stretching + brush teeth
-08:00 - 08:20: take shower
-08:20 - 09:00: go to school
-09:00 - 10:30: Calculus
-10:30 - 12:00: Embodied AI
-12:00 - 13:00: Gym
-13:00 - 14:00: Lunch
-14:00 - 18:00: Embodied AI
-18:00 - 19:00: Dinner
-19:00 - 22:00: Embodied AI
-22:00 - 23:00: Go back home and shower
-23:00 - 24:00: Plan schedule
+09:00 - 11:00: [blank]
+11:00 - 12:00: lunch break
+12:00 - 18:00: [blank]
+18:00 - 19:00: dinner break
+19:00 - 22:00: [blank]
 
 Sunday:
-07:30 - 07:40: try to wake up
-07:40 - 08:00: stretching + brush teeth
-08:00 - 08:20: take shower
-08:20 - 09:00: go to school
-09:00 - 12:00: do Calculus problems
-12:00 - 13:00: Gym
-13:00 - 14:00: Lunch
-14:00 - 18:00: Embodied AI
-18:00 - 19:00: Dinner
-19:00 - 22:00: Embodied AI
-22:00 - 23:00: Go back home and shower
-23:00 - 24:00: Plan schedule
+09:00 - 11:00: [blank]
+11:00 - 12:00: lunch break
+12:00 - 18:00: [blank]
+18:00 - 19:00: dinner break
+19:00 - 22:00: [blank]
