@@ -1,54 +1,56 @@
 Monday:
-09:00 - 11:00: 操卷 MA3511
-11:00 - 12:00: lunch break
-12:00 - 14:00: MA2001 Multi-variable Calculus and Linear Algebra LT-15
-14:00 - 15:00: 操卷 MA2001
-15:00 - 18:00: GE1358
+09:00 - 11:00: EAI
+11:00 - 12:00: Gym
+12:00 - 13:00: Lunch Break
+13:00 - 15:00: GE1360-C01 YEUNG LT-1
+15:00 - 18:00: EAI / GE1360-L01 YEUNG P5701
 18:00 - 19:00: dinner break
-19:00 - 22:00: [blank]
+19:00 - 22:00: EAI
 
 Tuesday: 
-09:00 - 11:00: 操卷 GE1358
-11:00 - 12:00: lunch break
-12:00 - 15:00: GE2134 11591
-15:00 - 18:00: [blank]
+09:00 - 11:00: EAI
+11:00 - 12:00: Gym
+12:00 - 13:00: Lunch Break
+13:00 - 16:00: EAI
+16:00 - 17:00: GE1360-T01 YEUNG LT-6
+17:00 - 18:00: GE1360 Rev
 18:00 - 19:00: dinner break
-19:00 - 22:00: [blank]
+19:00 - 22:00: EAI
 
 Wednesday:
-09:00 - 11:00: [blank]
-11:00 - 12:00: lunch break
-12:00 - 15:00: MA3511 Ordinary Differential Equations YEUNG LT-16
-15:00 - 18:00: [blank]
+09:00 - 11:00: EAI
+11:00 - 12:00: Lunch
+12:00 - 15:00: MA3511-ODE YEUNG LT-16
+15:00 - 18:00: EAI
 18:00 - 19:00: dinner break
-19:00 - 22:00: [blank]
+19:00 - 22:00: EAI
 
 Thursday:
-09:00 - 11:00: [blank]
+09:00 - 11:00: EAI
 11:00 - 12:00: lunch break
-12:00 - 18:00: [blank]
-18:00 - 19:00: dinner break
-19:00 - 21:00: MA2001 Multi-variable Calculus and Linear Algebra LT-12
-21:00 - 22:00: [blank]
+12:00 - 15:00: GE4130-C01 YEUNG B5-208
+15:00 - 18:00: EAI
+18:00 - 19:00: Dinner Break
+19:00 - 22:00: EAI
 
 Friday:
 09:00 - 12:00: JC2066 LT-1
 12:00 - 13:00: lunch break
 13:00 - 14:00: JC2066 LAU 5-206
-14:00 - 18:00: [blank]
+14:00 - 18:00: EAI
 18:00 - 19:00: dinner break
-19:00 - 22:00: [blank]
+19:00 - 22:00: EAI
 
 Saturday:
-09:00 - 11:00: [blank]
+09:00 - 11:00: EAI
 11:00 - 12:00: lunch break
-12:00 - 18:00: [blank]
+12:00 - 18:00: EAI
 18:00 - 19:00: dinner break
-19:00 - 22:00: [blank]
+19:00 - 22:00: EAI
 
 Sunday:
-09:00 - 11:00: [blank]
+09:00 - 11:00: EAI
 11:00 - 12:00: lunch break
-12:00 - 18:00: [blank]
+12:00 - 18:00: EAI
 18:00 - 19:00: dinner break
-19:00 - 22:00: [blank]
+19:00 - 22:00: EAI
