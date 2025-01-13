@@ -20,7 +20,7 @@ Tuesday:
 Wednesday:
 09:00 - 11:00: EAI
 11:00 - 12:00: Lunch Break
-12:00 - 15:00: MA3511-ODE YEUNG LT-16
+12:00 - 15:00: MVCalculus
 15:00 - 18:00: EAI
 18:00 - 19:00: Dinner Break
 19:00 - 22:00: EAI
