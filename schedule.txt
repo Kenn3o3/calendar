@@ -3,9 +3,9 @@ Monday:
 11:00 - 12:00: Gym
 12:00 - 13:00: Lunch Break
 13:00 - 15:00: GE1360-C01 YEUNG LT-1
-15:00 - 18:00: EAI / GE1360-L01 YEUNG P5701
-18:00 - 19:00: Dinner Break
-19:00 - 22:00: EAI
+15:00 - 19:30: EAI
+19:30 - 21:00: Dinner Break
+21:00 - 22:00: EAI
 
 Tuesday: 
 09:00 - 11:00: EAI
