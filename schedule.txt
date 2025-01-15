@@ -37,9 +37,9 @@ Friday:
 09:00 - 12:00: JC2066 LT-1
 12:00 - 13:00: Lunch Break
 13:00 - 14:00: JC2066 LAU 5-206
-14:00 - 18:00: EAI
-18:00 - 19:00: Dinner Break
-19:00 - 22:00: EAI
+14:00 - 20:00: EAI
+20:00 - 21:30: Dinner Break
+21:30 - 22:00: scheduling
 
 Saturday:
 09:00 - 11:00: EAI
