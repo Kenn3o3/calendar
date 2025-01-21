@@ -42,15 +42,15 @@ Friday:
 21:30 - 22:00: scheduling
 
 Saturday:
-09:00 - 11:00: EAI
+09:00 - 11:00: Robotics Software Engineer
 11:00 - 12:00: Gym
 12:00 - 13:00: Lunch Break
 13:00 - 18:00: EAI
 18:00 - 19:00: Dinner Break
-19:00 - 22:00: EAI
+19:00 - 22:00: Robotics Software Engineer
 
 Sunday:
-09:00 - 11:00: EAI
+09:00 - 11:00: Robotics Software Engineer
 11:00 - 12:00: Gym
 12:00 - 13:00: Lunch Break
 13:00 - 18:00: EAI
