@@ -4,21 +4,21 @@ Monday:
 12:00 - 13:00: Lunch Break
 13:00 - 15:00: GE1360-C01 YEUNG LT-1
 15:00 - 19:30: EAI
-19:30 - 21:00: Dinner Break
-21:00 - 22:00: EAI
+19:30 - 21:00: Dinner Break (home)
+21:00 - 23:00: FYP
 
 Tuesday: 
-09:00 - 11:00: EAI
+09:00 - 11:00: FYP
 11:00 - 12:00: Gym
 12:00 - 13:00: Lunch Break
 13:00 - 16:00: EAI
 16:00 - 17:00: GE1360-T01 YEUNG LT-6
 17:00 - 18:00: GE1360 Rev
 18:00 - 19:00: Dinner Break
-19:00 - 22:00: EAI
+19:00 - 23:00: EAI
 
 Wednesday:
-09:00 - 11:00: EAI
+09:00 - 11:00: FYP
 11:00 - 12:00: Lunch Break
 12:00 - 15:00: MVCalculus
 15:00 - 18:00: EAI
@@ -26,12 +26,12 @@ Wednesday:
 19:00 - 22:00: EAI
 
 Thursday:
-09:00 - 11:00: EAI
+09:00 - 11:00: Robotics Software Engineer
 11:00 - 12:00: Lunch Break
 12:00 - 15:00: GE4130-C01 YEUNG B5-208
-15:00 - 18:00: EAI
-18:00 - 19:00: Dinner Break
-19:00 - 22:00: EAI
+15:00 - 19:00: EAI
+19:00 - 21:00: Dinner Break
+21:00 - 23:00: FYP
 
 Friday:
 09:00 - 12:00: JC2066 LT-1
@@ -45,7 +45,7 @@ Saturday:
 09:00 - 11:00: Robotics Software Engineer
 11:00 - 12:00: Gym
 12:00 - 13:00: Lunch Break
-13:00 - 18:00: EAI
+13:00 - 18:00: Eric Project
 18:00 - 19:00: Dinner Break
 19:00 - 22:00: Robotics Software Engineer
 
@@ -55,4 +55,4 @@ Sunday:
 12:00 - 13:00: Lunch Break
 13:00 - 18:00: EAI
 18:00 - 19:00: Dinner Break
-19:00 - 22:00: EAI
+19:00 - 22:00: FYP
