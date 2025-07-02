@@ -1,58 +1,83 @@
 Monday:
-09:00 - 11:00: EAI
-11:00 - 12:00: Gym
-12:00 - 13:00: Lunch Break
-13:00 - 15:00: GE1360-C01 YEUNG LT-1
-15:00 - 19:00: EAI
-19:00 - 21:00: Dinner Break
-21:00 - 23:00: Eric Project
+08:00 - 08:30: Breakfast
+08:30 - 09:30: Travel to lab
+09:30 - 12:30: Research
+12:30 - 13:30: Lunch
+13:30 - 18:30: Research
+18:30 - 19:30: Sports or Leisure
+19:30 - 20:30: Leave lab
+20:30 - 21:00: Dinner
+21:00 - 23:00: Study
+23:00 - 23:59: Shower, Planning
 
-Tuesday: 
-09:00 - 11:00: FYP
-11:00 - 12:00: Gym
-12:00 - 13:00: Lunch Break
-13:00 - 16:00: EAI
-16:00 - 17:00: GE1360 Rev
-17:00 - 19:00: MVCalculus
-19:00 - 21:00: Dinner Break
-21:00 - 23:00: EAI
+Tuesday:
+08:00 - 08:30: Breakfast
+08:30 - 09:30: Travel to lab
+09:30 - 12:30: Research
+12:30 - 13:30: Lunch
+13:30 - 18:30: Research
+18:30 - 19:30: Sports or Leisure
+19:30 - 20:30: Leave lab
+20:30 - 21:00: Dinner
+21:00 - 23:00: Study
+23:00 - 23:59: Shower, Planning
 
 Wednesday:
-09:00 - 11:00: FYP
-11:00 - 12:00: Lunch Break
-12:00 - 15:00: MVCalculus
-15:00 - 19:00: EAI
-19:00 - 21:00: Dinner Break
-21:00 - 23:00: Eric Project
+08:00 - 08:30: Breakfast
+08:30 - 09:30: Travel to lab
+09:30 - 12:30: Research
+12:30 - 13:30: Lunch
+13:30 - 18:30: Research
+18:30 - 19:30: Sports or Leisure
+19:30 - 20:30: Leave lab
+20:30 - 21:00: Dinner
+21:00 - 23:00: Study
+23:00 - 23:59: Shower, Planning
 
 Thursday:
-09:00 - 11:00: Robotics Software Engineer
-11:00 - 12:00: Lunch Break
-12:00 - 15:00: GE4130-C01 YEUNG B5-208
-15:00 - 19:00: EAI
-19:00 - 21:00: Dinner Break
-21:00 - 23:00: FYP
+08:00 - 08:30: Breakfast
+08:30 - 09:30: Travel to lab
+09:30 - 12:30: Research
+12:30 - 13:30: Lunch
+13:30 - 18:30: Research
+18:30 - 19:30: Sports or Leisure
+19:30 - 20:30: Leave lab
+20:30 - 21:00: Dinner
+21:00 - 23:00: Study
+23:00 - 23:59: Shower, Planning
 
 Friday:
-09:00 - 12:00: JC2066 LT-1
-12:00 - 13:00: Lunch Break
-13:00 - 14:00: JC2066 LAU 5-206
-14:00 - 19:00: EAI
-19:00 - 21:00: Dinner Break
-21:00 - 23:00: FYP
+08:00 - 08:30: Breakfast
+08:30 - 09:30: Travel to lab
+09:30 - 12:30: Research
+12:30 - 13:30: Lunch
+13:30 - 18:30: Research
+18:30 - 19:30: Sports or Leisure
+19:30 - 20:30: Leave lab
+20:30 - 21:00: Dinner
+21:00 - 23:00: Study
+23:00 - 23:59: Shower, Planning
 
 Saturday:
-09:00 - 11:00: Robotics Software Engineer
-11:00 - 12:00: Gym
-12:00 - 13:00: Lunch Break
-13:00 - 18:00: Eric Project
-18:00 - 19:00: Dinner Break
-19:00 - 23:00: Robotics Software Engineer
+08:00 - 09:00: Breakfast
+09:00 - 11:00: Study
+11:00 - 12:00: Sports or Leisure
+12:00 - 13:00: Lunch
+13:00 - 18:00: Research
+18:00 - 19:00: Free time
+19:00 - 20:30: Reading "The Pyramid Principle"
+20:30 - 21:00: Dinner
+21:00 - 23:00: Study
+23:00 - 23:59: Shower, Planning
 
 Sunday:
-09:00 - 11:00: Robotics Software Engineer
-11:00 - 12:00: Gym
-12:00 - 13:00: Lunch Break
-13:00 - 18:00: FYP
-18:00 - 19:00: Dinner Break
-19:00 - 23:00: FYP
+08:00 - 09:00: Breakfast
+09:00 - 11:00: Study
+11:00 - 12:00: Sports or Leisure
+12:00 - 13:00: Lunch
+13:00 - 18:00: Research
+18:00 - 19:00: Free time
+19:00 - 20:30: Reading "The Pyramid Principle"
+20:30 - 21:00: Dinner
+21:00 - 23:00: Writing blog posts
+23:00 - 23:59: Shower, Planning
