@@ -1,7 +1,7 @@
 Monday:
 08:00 - 08:30: Breakfast
-08:30 - 09:30: Travel to lab
-09:30 - 12:30: Research
+08:30 - 11:30: Research
+11:30 - 12:30: Travel to lab
 12:30 - 13:30: Lunch
 13:30 - 18:30: Research
 18:30 - 19:30: Sports or Leisure
@@ -12,8 +12,8 @@ Monday:
 
 Tuesday:
 08:00 - 08:30: Breakfast
-08:30 - 09:30: Travel to lab
-09:30 - 12:30: Research
+08:30 - 11:30: Research
+11:30 - 12:30: Travel to lab
 12:30 - 13:30: Lunch
 13:30 - 18:30: Research
 18:30 - 19:30: Sports or Leisure
@@ -24,8 +24,8 @@ Tuesday:
 
 Wednesday:
 08:00 - 08:30: Breakfast
-08:30 - 09:30: Travel to lab
-09:30 - 12:30: Research
+08:30 - 11:30: Research
+11:30 - 12:30: Travel to lab
 12:30 - 13:30: Lunch
 13:30 - 18:30: Research
 18:30 - 19:30: Sports or Leisure
@@ -36,8 +36,8 @@ Wednesday:
 
 Thursday:
 08:00 - 08:30: Breakfast
-08:30 - 09:30: Travel to lab
-09:30 - 12:30: Research
+08:30 - 11:30: Research
+11:30 - 12:30: Travel to lab
 12:30 - 13:30: Lunch
 13:30 - 18:30: Research
 18:30 - 19:30: Sports or Leisure
@@ -48,8 +48,8 @@ Thursday:
 
 Friday:
 08:00 - 08:30: Breakfast
-08:30 - 09:30: Travel to lab
-09:30 - 12:30: Research
+08:30 - 11:30: Research
+11:30 - 12:30: Travel to lab
 12:30 - 13:30: Lunch
 13:30 - 18:30: Research
 18:30 - 19:30: Sports or Leisure
