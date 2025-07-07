@@ -1,62 +1,42 @@
 Monday:
 08:00 - 08:30: Breakfast
-08:30 - 11:30: Research
-11:30 - 12:30: Travel to lab
-12:30 - 13:30: Lunch
-13:30 - 18:30: Research
-18:30 - 19:30: Sports or Leisure
-19:30 - 20:30: Leave lab
-20:30 - 21:00: Dinner
-21:00 - 23:00: Study
-23:00 - 23:59: Shower, Planning
+08:30 - 11:30: Study
+11:30 - 13:30: Lunch + Travel to lab
+13:30 - 21:00: Research
+21:00 - 22:00: Leave lab
+22:00 - 23:59: Shower, Planning
 
 Tuesday:
 08:00 - 08:30: Breakfast
-08:30 - 11:30: Research
-11:30 - 12:30: Travel to lab
-12:30 - 13:30: Lunch
-13:30 - 18:30: Research
-18:30 - 19:30: Sports or Leisure
-19:30 - 20:30: Leave lab
-20:30 - 21:00: Dinner
-21:00 - 23:00: Study
-23:00 - 23:59: Shower, Planning
+08:30 - 11:30: Study
+11:30 - 13:30: Lunch + Travel to lab
+13:30 - 21:00: Research
+21:00 - 22:00: Leave lab
+22:00 - 23:59: Shower, Planning
 
 Wednesday:
 08:00 - 08:30: Breakfast
-08:30 - 11:30: Research
-11:30 - 12:30: Travel to lab
-12:30 - 13:30: Lunch
-13:30 - 18:30: Research
-18:30 - 19:30: Sports or Leisure
-19:30 - 20:30: Leave lab
-20:30 - 21:00: Dinner
-21:00 - 23:00: Study
-23:00 - 23:59: Shower, Planning
+08:30 - 11:30: Study
+11:30 - 13:30: Lunch + Travel to lab
+13:30 - 21:00: Research
+21:00 - 22:00: Leave lab
+22:00 - 23:59: Shower, Planning
 
 Thursday:
 08:00 - 08:30: Breakfast
-08:30 - 11:30: Research
-11:30 - 12:30: Travel to lab
-12:30 - 13:30: Lunch
-13:30 - 18:30: Research
-18:30 - 19:30: Sports or Leisure
-19:30 - 20:30: Leave lab
-20:30 - 21:00: Dinner
-21:00 - 23:00: Study
-23:00 - 23:59: Shower, Planning
+08:30 - 11:30: Study
+11:30 - 13:30: Lunch + Travel to lab
+13:30 - 21:00: Research
+21:00 - 22:00: Leave lab
+22:00 - 23:59: Shower, Planning
 
 Friday:
 08:00 - 08:30: Breakfast
-08:30 - 11:30: Research
-11:30 - 12:30: Travel to lab
-12:30 - 13:30: Lunch
-13:30 - 18:30: Research
-18:30 - 19:30: Sports or Leisure
-19:30 - 20:30: Leave lab
-20:30 - 21:00: Dinner
-21:00 - 23:00: Study
-23:00 - 23:59: Shower, Planning
+08:30 - 11:30: Study
+11:30 - 13:30: Lunch + Travel to lab
+13:30 - 21:00: Research
+21:00 - 22:00: Leave lab
+22:00 - 23:59: Shower, Planning
 
 Saturday:
 08:00 - 09:00: Breakfast
